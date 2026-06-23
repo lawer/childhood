@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="ca">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Childhood — Edició espanyola per a quadrícula</title>
+  <meta name="description" content="Punt d'entrada del repositori Childhood: manual adaptat a quadrícula, mapes imprimibles, assets i fonts Markdown.">
+  <meta property="og:title" content="Childhood — Edició espanyola per a quadrícula">
+  <meta property="og:description" content="Manual, mapes i recursos imprimibles per jugar Childhood en tablero de casillas.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/bienvenidos-a-childhood.png">
+  <style>
+    :root {
+      --ink: #171421;
+      --paper: #fff7df;
+      --paper-2: #fff1b9;
+      --cyan: #00d7ff;
+      --magenta: #ff3dbb;
+      --yellow: #ffe34f;
+      --green: #69ff77;
+      --blue: #2833ff;
+      --shadow: rgba(23, 20, 33, .24);
+      --grid: rgba(40, 51, 255, .13);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: "Comic Sans MS", "Trebuchet MS", system-ui, sans-serif;
+      background:
+        linear-gradient(var(--grid) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid) 1px, transparent 1px),
+        radial-gradient(circle at 15% 10%, rgba(255, 61, 187, .22), transparent 24rem),
+        radial-gradient(circle at 85% 18%, rgba(0, 215, 255, .2), transparent 20rem),
+        linear-gradient(135deg, var(--paper), var(--paper-2));
+      background-size: 28px 28px, 28px 28px, auto, auto, auto;
+      min-height: 100vh;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .wrap {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 42px 0 24px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(260px, .8fr);
+      gap: 28px;
+      align-items: center;
+      border: 5px solid var(--ink);
+      border-radius: 24px;
+      background: rgba(255, 255, 255, .78);
+      box-shadow: 10px 10px 0 var(--shadow);
+      padding: clamp(20px, 4vw, 42px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "PRESS START";
+      position: absolute;
+      right: 24px;
+      top: 18px;
+      transform: rotate(5deg);
+      font-size: .75rem;
+      letter-spacing: .16em;
+      background: var(--yellow);
+      border: 3px solid var(--ink);
+      padding: .35rem .55rem;
+      box-shadow: 4px 4px 0 var(--magenta);
+    }
+
+    h1, h2, h3 {
+      margin: 0;
+      line-height: 1.05;
+    }
+
+    h1 {
+      font-size: clamp(2.4rem, 8vw, 5.6rem);
+      letter-spacing: -.06em;
+      text-transform: uppercase;
+      text-shadow: 4px 4px 0 var(--cyan), 8px 8px 0 var(--magenta);
+    }
+
+    .subtitle {
+      max-width: 58ch;
+      margin: 1.2rem 0 0;
+      font-size: clamp(1.05rem, 2.2vw, 1.35rem);
+      line-height: 1.45;
+    }
+
+    .tagline {
+      display: inline-block;
+      margin-bottom: 1rem;
+      padding: .4rem .7rem;
+      border: 3px solid var(--ink);
+      background: var(--green);
+      transform: rotate(-1deg);
+      font-weight: 800;
+      box-shadow: 4px 4px 0 var(--ink);
+    }
+
+    .hero-img {
+      margin: 0;
+      border: 5px solid var(--ink);
+      border-radius: 18px;
+      background: white;
+      box-shadow: 8px 8px 0 var(--cyan);
+      transform: rotate(1deg);
+      overflow: hidden;
+    }
+
+    .hero-img img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+    }
+
+    main {
+      padding: 18px 0 56px;
+    }
+
+    .actions {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin: 28px 0;
+    }
+
+    .button-card,
+    .card {
+      display: block;
+      min-height: 100%;
+      border: 4px solid var(--ink);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, .85);
+      padding: 18px;
+      box-shadow: 7px 7px 0 var(--shadow);
+      text-decoration: none;
+    }
+
+    .button-card {
+      transition: transform .14s ease, box-shadow .14s ease;
+    }
+
+    .button-card:hover {
+      transform: translate(-2px, -2px) rotate(-.4deg);
+      box-shadow: 10px 10px 0 var(--magenta);
+    }
+
+    .button-card strong {
+      display: block;
+      margin-bottom: .35rem;
+      font-size: 1.25rem;
+      text-transform: uppercase;
+    }
+
+    .button-card.primary {
+      background: var(--yellow);
+    }
+
+    .button-card.secondary {
+      background: var(--cyan);
+    }
+
+    .button-card.tertiary {
+      background: var(--magenta);
+      color: white;
+    }
+
+    .section-title {
+      margin: 42px 0 16px;
+      padding-left: .5rem;
+      border-left: 10px solid var(--magenta);
+      font-size: clamp(1.6rem, 4vw, 2.5rem);
+      text-transform: uppercase;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .card img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border: 3px solid var(--ink);
+      border-radius: 12px;
+      background: white;
+    }
+
+    .card h3 {
+      margin-top: .8rem;
+      font-size: 1.08rem;
+    }
+
+    .card p {
+      margin: .45rem 0 0;
+      line-height: 1.38;
+    }
+
+    .repo-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .repo-list a {
+      display: block;
+      border: 3px dashed var(--ink);
+      border-radius: 14px;
+      padding: 13px 15px;
+      background: rgba(255, 255, 255, .72);
+      text-decoration: none;
+    }
+
+    .note {
+      margin-top: 24px;
+      border: 4px solid var(--ink);
+      border-radius: 18px;
+      background: rgba(255, 227, 79, .82);
+      padding: 16px 18px;
+      box-shadow: 6px 6px 0 var(--shadow);
+    }
+
+    footer {
+      padding: 30px 0 44px;
+      text-align: center;
+      font-size: .95rem;
+    }
+
+    @media (max-width: 860px) {
+      .hero,
+      .actions,
+      .repo-list {
+        grid-template-columns: 1fr;
+      }
+
+      .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 560px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        text-shadow: 3px 3px 0 var(--cyan), 6px 6px 0 var(--magenta);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="wrap">
+    <section class="hero" aria-labelledby="site-title">
+      <div>
+        <span class="tagline">Manual fan/localitzat · tablero de casillas</span>
+        <h1 id="site-title">Childhood</h1>
+        <p class="subtitle">
+          Adaptació editorial en castellà d’Espanya per jugar en quadrícula:
+          regles revisades, taules compactades, mapes tàctics i recursos imprimibles
+          amb estètica de quadern escolar, recreatius i tardes dels noranta.
+        </p>
+      </div>
+      <figure class="hero-img">
+        <img src="images/bienvenidos-a-childhood.png" alt="Il·lustració d'entrada a Childhood amb estètica doodle noventera">
+      </figure>
+    </section>
+  </header>
+
+  <main class="wrap">
+    <nav class="actions" aria-label="Accessos principals">
+      <a class="button-card primary" href="childhood_es_grid.html">
+        <strong>Llegir el manual</strong>
+        Versió HTML completa, preparada per navegar des del navegador.
+      </a>
+      <a class="button-card secondary" href="childhood_es_grid.md">
+        <strong>Font Markdown</strong>
+        Text semàntic llest per exportar a PDF amb Pandoc o eina similar.
+      </a>
+      <a class="button-card tertiary" href="maps/printable-map-prompts.md">
+        <strong>Mapes i prompts</strong>
+        Mapes bitmap 12×12 i prompts base per regenerar-los.
+      </a>
+    </nav>
+
+    <h2 class="section-title">Mapes imprimibles 12×12</h2>
+    <section class="grid" aria-label="Mapes imprimibles">
+      <a class="card" href="maps/printable/el-vecindario-12x12.png">
+        <img src="maps/printable/el-vecindario-12x12.png" alt="Mapa imprimible 12×12 del vecindario">
+        <h3>El Vecindario</h3>
+        <p>Portes, voreres, cases i tasques del barri.</p>
+      </a>
+      <a class="card" href="maps/printable/el-cuartel-general-12x12.png">
+        <img src="maps/printable/el-cuartel-general-12x12.png" alt="Mapa imprimible 12×12 del cuartel general">
+        <h3>El Cuartel General</h3>
+        <p>Forta central, barricades i entrades pels quatre costats.</p>
+      </a>
+      <a class="card" href="maps/printable/el-patio-del-colegio-12x12.png">
+        <img src="maps/printable/el-patio-del-colegio-12x12.png" alt="Mapa imprimible 12×12 del patio del colegio">
+        <h3>El Patio del Colegio</h3>
+        <p>Pistes, tanques, objectius i cobertura escolar.</p>
+      </a>
+      <a class="card" href="maps/printable/el-recreativos-12x12.png">
+        <img src="maps/printable/el-recreativos-12x12.png" alt="Mapa imprimible 12×12 del local de recreativos">
+        <h3>El Recreativos</h3>
+        <p>Passadissos de màquines, premis i bassals de refresc.</p>
+      </a>
+    </section>
+
+    <h2 class="section-title">Recursos del repositori</h2>
+    <ul class="repo-list">
+      <li><a href="images/">Carpeta d’imatges editorials i enemics</a></li>
+      <li><a href="maps/">Mapes SVG tàctics estil Game Boy</a></li>
+      <li><a href="core_rules_es.md">Regles bàsiques adaptades a quadrícula</a></li>
+      <li><a href="equipment_es.md">Equip, botigues i cachivaches</a></li>
+      <li><a href="student_names_es.md">Generador de noms de criatures</a></li>
+      <li><a href="club_names_es.md">Generador de noms de pandilla</a></li>
+    </ul>
+
+    <aside class="note">
+      <strong>Publicació:</strong> aquest repositori està preparat com a web estàtica.
+      A GitHub Pages pots publicar des de l’arrel de la branca principal o utilitzar
+      el workflow inclòs a <code>.github/workflows/pages.yml</code>.
+    </aside>
+  </main>
+
+  <footer class="wrap">
+    <p>Childhood — edició fan en castellà per a quadrícula. Fet per jugar, imprimir i trastejar.</p>
+  </footer>
+</body>
+</html>
