@@ -4,71 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Imatges — Childhood</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: "Comic Sans MS", "Trebuchet MS", system-ui, sans-serif;
-      color: #171421;
-      background:
-        linear-gradient(rgba(40, 51, 255, .12) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(40, 51, 255, .12) 1px, transparent 1px),
-        #fff7df;
-      background-size: 28px 28px;
-    }
-    main {
-      width: min(1080px, calc(100% - 32px));
-      margin: 0 auto;
-      padding: 32px 0 56px;
-    }
-    a { color: inherit; }
-    h1 {
-      margin: 0 0 18px;
-      font-size: clamp(2rem, 7vw, 4.5rem);
-      text-transform: uppercase;
-      text-shadow: 4px 4px 0 #00d7ff, 8px 8px 0 #ff3dbb;
-    }
-    .back {
-      display: inline-block;
-      margin-bottom: 24px;
-      border: 3px solid #171421;
-      background: #ffe34f;
-      padding: .5rem .75rem;
-      text-decoration: none;
-      box-shadow: 4px 4px 0 rgba(23, 20, 33, .24);
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 18px;
-    }
-    .card {
-      border: 4px solid #171421;
-      border-radius: 18px;
-      background: rgba(255,255,255,.84);
-      padding: 14px;
-      box-shadow: 7px 7px 0 rgba(23, 20, 33, .24);
-      text-decoration: none;
-    }
-    .card img {
-      width: 100%;
-      aspect-ratio: 4 / 3;
-      object-fit: cover;
-      border: 3px solid #171421;
-      border-radius: 12px;
-      background: white;
-    }
-    .card span {
-      display: block;
-      margin-top: .7rem;
-      font-weight: 800;
-    }
-  </style>
+  <link rel="stylesheet" href="../styles/site.css">
 </head>
 <body>
-  <main>
+  <main class="page">
     <a class="back" href="../index.html">← Tornar a l’inici</a>
     <h1>Imatges</h1>
-    <section class="grid" aria-label="Imatges editorials">
+    <section class="grid image-gallery" aria-label="Imatges editorials">
       <a class="card" href="bienvenidos-a-childhood.png"><img src="bienvenidos-a-childhood.png" alt="Bienvenidos a Childhood"><span>Bienvenidos a Childhood</span></a>
       <a class="card" href="crear-la-pandilla.png"><img src="crear-la-pandilla.png" alt="Crear la pandilla"><span>Crear la pandilla</span></a>
       <a class="card" href="reglas-de-juego.png"><img src="reglas-de-juego.png" alt="Reglas de juego"><span>Reglas de juego</span></a>

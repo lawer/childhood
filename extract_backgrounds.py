@@ -45,4 +45,4 @@ for number in sorted(entries):
         body = " ".join(words[5:])
     out.extend([f"### {number}. {title}", "", body, ""])
 
-Path("backgrounds_es.md").write_text("\n".join(out).strip() + "\n", encoding="utf-8")
+Path("partials/backgrounds_es.md").write_text("\n".join(out).strip() + "\n", encoding="utf-8")

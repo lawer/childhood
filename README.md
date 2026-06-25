@@ -8,6 +8,9 @@ Abre `index.html` para navegar el proyecto:
 
 - Manual HTML completo: `childhood_es_grid.html`
 - Fuente Markdown para exportar a PDF: `childhood_es_grid.md`
+- Parciales fuente: `partials/`
+- Hojas de estilo: `styles/`
+- Utilidades JavaScript: `tools/` y `scripts/`
 - Mapas imprimibles: `maps/printable/`
 - Prompts de mapas: `maps/printable-map-prompts.md`
 - Mapas tácticos SVG: `maps/`
@@ -43,16 +46,7 @@ Si modificas los fragmentos Markdown fuente, puedes regenerar el documento edito
 
 ```bash
 /tmp/childhood-venv/bin/python build_childhood_editorial.py
-pandoc childhood_es_grid.md \
-  --from=gfm \
-  --to=html5 \
-  --standalone \
-  --toc \
-  --toc-depth=2 \
-  --metadata lang=es-ES \
-  --metadata title='Childhood — Edición española para cuadrícula' \
-  --include-in-header=childhood_header.html \
-  --output=childhood_es_grid.html
+python3 build_childhood_html.py
 ```
 
 > Ajusta la ruta de Python si usas otro entorno virtual.

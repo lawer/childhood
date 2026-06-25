@@ -16,32 +16,34 @@ from build_childhood_es import GRID_RULES, convert_measurements, image_prompt, l
 SOURCE = Path("/tmp/childhood_raw.txt")
 CACHE = Path("/tmp/childhood_raw_translation_cache.json")
 OUTPUT = Path("childhood_es_grid.md")
-CORE_RULES = Path("core_rules_es.md")
-EQUIPMENT = Path("equipment_es.md")
-CAMPAIGN_INTRO = Path("campaign_intro_es.md")
-INTRO = Path("intro_es.md")
-CREATION_INTRO = Path("creation_intro_es.md")
-SKILLS = Path("skills_es.md")
-BACKGROUNDS = Path("backgrounds_es.md")
-CLUB_NAMES = Path("club_names_es.md")
-STUDENT_NAMES = Path("student_names_es.md")
+PARTIALS = Path("partials")
+CORE_RULES = PARTIALS / "core_rules_es.md"
+EQUIPMENT = PARTIALS / "equipment_es.md"
+CAMPAIGN_INTRO = PARTIALS / "campaign_intro_es.md"
+INTRO = PARTIALS / "intro_es.md"
+CREATION_INTRO = PARTIALS / "creation_intro_es.md"
+SKILLS = PARTIALS / "skills_es.md"
+BACKGROUNDS = PARTIALS / "backgrounds_es.md"
+CLUB_NAMES = PARTIALS / "club_names_es.md"
+STUDENT_NAMES = PARTIALS / "student_names_es.md"
 PRINTABLE_MAP_PROMPTS = Path("maps/printable-map-prompts.md")
+OFFICIAL_RULES_ANNEX = PARTIALS / "anexo_reglas_oficiales_es.md"
 EPISODE_STORES = {
-    81: Path("store_episode2_es.md"),
-    109: Path("store_episode3_es.md"),
-    123: Path("store_episode4_es.md"),
+    81: PARTIALS / "store_episode2_es.md",
+    109: PARTIALS / "store_episode3_es.md",
+    123: PARTIALS / "store_episode4_es.md",
 }
-CAMPAIGN_PROGRESS = Path("campaign_progress_es.md")
-FISHING = Path("fishing_es.md")
-EPISODE1 = Path("episode1_es.md")
+CAMPAIGN_PROGRESS = PARTIALS / "campaign_progress_es.md"
+FISHING = PARTIALS / "fishing_es.md"
+EPISODE1 = PARTIALS / "episode1_es.md"
 EPISODE2_PARTS = {
-    80: Path("episode2_intro_es.md"),
-    83: Path("episode2_rural_es.md"),
-    93: Path("episode2_urban_es.md"),
-    101: Path("episode2_final_es.md"),
+    80: PARTIALS / "episode2_intro_es.md",
+    83: PARTIALS / "episode2_rural_es.md",
+    93: PARTIALS / "episode2_urban_es.md",
+    101: PARTIALS / "episode2_final_es.md",
 }
-EPISODE3_INTRO = Path("episode3_intro_es.md")
-EPISODE3 = Path("episode3_es.md")
+EPISODE3_INTRO = PARTIALS / "episode3_intro_es.md"
+EPISODE3 = PARTIALS / "episode3_es.md"
 
 BACKGROUND_TITLES = {
     1:"Expuesto a productos químicos",2:"Niño rico",3:"Mocoso",4:"Payaso de clase",5:"El nuevo",
@@ -638,6 +640,9 @@ def main() -> None:
         print(f"{page_no}/{len(pages)-1}", flush=True)
     if PRINTABLE_MAP_PROMPTS.exists():
         document.extend(["", PRINTABLE_MAP_PROMPTS.read_text(encoding="utf-8").strip(), ""])
+        OUTPUT.write_text("\n".join(document), encoding="utf-8")
+    if OFFICIAL_RULES_ANNEX.exists():
+        document.extend(["", OFFICIAL_RULES_ANNEX.read_text(encoding="utf-8").strip(), ""])
         OUTPUT.write_text("\n".join(document), encoding="utf-8")
 
 
