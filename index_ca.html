@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ca">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Patis i Portals — Edició catalana per a quadrícula</title>
+  <meta name="description" content="Punt d’entrada del repositori Patis i Portals: manual adaptat a quadrícula, mapes imprimibles, recursos i fonts Markdown.">
+  <meta property="og:title" content="Patis i Portals — Edició catalana per a quadrícula">
+  <meta property="og:description" content="Manual, mapes i recursos imprimibles per jugar Patis i Portals en tauler de caselles.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/bienvenidos-a-patios-portales.png">
+  <link rel="stylesheet" href="styles/site.css">
+</head>
+<body>
+  <nav class="language-switch" aria-label="Selector de idioma">
+    <a href="index.html">Castellano</a>
+    <a aria-current="page" href="index_ca.html">Català</a>
+  </nav>
+  <header class="wrap">
+    <section class="hero" aria-labelledby="site-title">
+      <div>
+        <span class="tagline">Manual fan/localitzat · tauler de caselles</span>
+        <h1 id="site-title">Patis i Portals</h1>
+        <p class="subtitle">
+          Adaptació editorial en català per jugar en quadrícula:
+          regles revisades, taules compactades, mapes tàctics i recursos imprimibles
+          amb estètica de quadern escolar, recreatius i tardes dels noranta.
+        </p>
+      </div>
+      <figure class="hero-img">
+        <img src="images/bienvenidos-a-patios-portales.png" alt="Il·lustració d’entrada a Patis i Portals amb estètica doodle norantera">
+      </figure>
+    </section>
+  </header>
+
+  <main class="wrap">
+    <nav class="actions" aria-label="Accessos principals">
+      <a class="button-card primary" href="patis_portals_ca.html">
+        <strong>Llegir el manual</strong>
+        Versió HTML completa, preparada per navegar des del navegador.
+      </a>
+      <a class="button-card secondary" href="patis_portals_ca.md">
+        <strong>Font Markdown</strong>
+        Text semàntic llest per exportar a PDF amb Pandoc o una eina similar.
+      </a>
+      <a class="button-card tertiary" href="maps/printable-map-prompts_ca.md">
+        <strong>Mapes i prompts</strong>
+        Mapes bitmap 12×12 i prompts base per regenerar-los.
+      </a>
+      <a class="button-card" href="tools/">
+        <strong>Utilitats JS</strong>
+        Generadors ràpids per crear colles, menuts i tirades.
+      </a>
+    </nav>
+
+    <h2 class="section-title">Mapes imprimibles 12×12</h2>
+    <section class="grid home-grid" aria-label="Mapes imprimibles">
+      <a class="card" href="maps/printable/el-vecindario-12x12.png">
+        <img src="maps/printable/el-vecindario-12x12.png" alt="Mapa imprimible 12×12 del vecindario">
+        <h3>El Vecindario</h3>
+        <p>Portes, voreres, cases i tasques del barri.</p>
+      </a>
+      <a class="card" href="maps/printable/el-cuartel-general-12x12.png">
+        <img src="maps/printable/el-cuartel-general-12x12.png" alt="Mapa imprimible 12×12 del cuartel general">
+        <h3>El Cuartel General</h3>
+        <p>Fort central, barricades i entrades pels quatre costats.</p>
+      </a>
+      <a class="card" href="maps/printable/el-patio-del-colegio-12x12.png">
+        <img src="maps/printable/el-patio-del-colegio-12x12.png" alt="Mapa imprimible 12×12 del patio del colegio">
+        <h3>El Patio del Colegio</h3>
+        <p>Pistes, tanques, objectius i cobertura escolar.</p>
+      </a>
+      <a class="card" href="maps/printable/el-recreativos-12x12.png">
+        <img src="maps/printable/el-recreativos-12x12.png" alt="Mapa imprimible 12×12 del local de recreativos">
+        <h3>El Recreativos</h3>
+        <p>Passadissos de màquines, premis i bassals de refresc.</p>
+      </a>
+    </section>
+
+    <h2 class="section-title">Recursos del repositori</h2>
+    <ul class="repo-list">
+      <li><a href="images/">Carpeta d’imatges editorials i enemics</a></li>
+      <li><a href="maps/">Mapes SVG tàctics estil Game Boy</a></li>
+      <li><a href="tools/">Utilitats JS para crear pandillas</a></li>
+      <li><a href="partials/">Parcials Markdown font</a></li>
+      <li><a href="partials/core_rules_ca.md">Regles bàsiques adaptades a quadrícula</a></li>
+      <li><a href="partials/anexo_reglas_oficiales_ca.md">Annex de normes oficials sense caselles</a></li>
+      <li><a href="partials/equipment_ca.md">Equip, botigues i rampoines</a></li>
+      <li><a href="partials/student_names_ca.md">Generador de noms de menuts</a></li>
+      <li><a href="partials/club_names_ca.md">Generador de noms de colla</a></li>
+    </ul>
+
+    <aside class="note">
+      <strong>Publicació:</strong> aquest repositori està preparat com a web estàtica.
+      A GitHub Pages pots publicar des de l’arrel de la branca principal o utilitzar
+      el workflow inclòs en <code>.github/workflows/pages.yml</code>.
+    </aside>
+  </main>
+
+  <footer class="wrap">
+    <p>Patis i Portals — edició fan en català per a quadrícula. Fet per jugar, imprimir i trastejar.</p>
+  </footer>
+</body>
+</html>

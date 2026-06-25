@@ -4,7 +4,7 @@ Todos los artículos son Prohibidos. Solo una pandilla con Tarjeta corporativa p
 
 | Artículo | Tipo | Coste | Efecto |
 |---|---|---:|---|
-| Cartucho de *Childhood* | Objeto | 50 chapas | Supera automáticamente la primera prueba de Mente de cada aventura. |
+| Cartucho de *Patios & Portales* | Objeto | 50 chapas | Supera automáticamente la primera prueba de Mente de cada aventura. |
 | Pastilla morada | Consumible | 30 chapas | Obtiene el Trasfondo 101 además de todos los que ya posea. |
 | Nuevo Zumo de Duende | Consumible | 10 chapas | Elimina todas las Consecuencias. Quien conozca la terrible verdad pierde 1 Mente. |
 | Brazo taladro | Arma | 20 chapas | Cuerpo, Daño 3; ignora Defensa de armadura. |

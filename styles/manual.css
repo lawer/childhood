@@ -58,6 +58,30 @@ ul.task-list li input[type="checkbox"] {
   box-sizing: border-box;
 }
 
+.language-switch {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-end;
+  margin: 0 0 1.5rem;
+}
+
+.language-switch a {
+  display: inline-block;
+  padding: .35rem .6rem;
+  border: 3px solid var(--ink);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .92);
+  box-shadow: 3px 3px 0 var(--pink);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.language-switch a[aria-current="page"] {
+  background: var(--yellow);
+  box-shadow: 3px 3px 0 var(--cyan);
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -76,7 +100,7 @@ body {
 }
 
 body::before {
-  content: "CHILDHOOD // EDICIÓN CUADRÍCULA";
+  content: "PATIOS & PORTALES // EDICIÓN CUADRÍCULA";
   display: block;
   padding: .9rem 1rem;
   margin-bottom: 2rem;

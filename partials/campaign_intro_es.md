@@ -1,6 +1,6 @@
 ## Episodios y aventuras
 
-La campaña de Childhood se divide en episodios, y cada episodio contiene varias aventuras. Al comenzar uno, la pandilla desbloquea su tienda y puede comprar allí antes de la primera aventura y entre partidas.
+La campaña de Patios & Portales se divide en episodios, y cada episodio contiene varias aventuras. Al comenzar uno, la pandilla desbloquea su tienda y puede comprar allí antes de la primera aventura y entre partidas.
 
 La última aventura de cada episodio es un combate contra un jefe. Al completarla, la tienda de ese episodio cierra y deja de estar disponible. La Tienda general del episodio 1 es la excepción: permanece abierta durante toda la campaña.
 

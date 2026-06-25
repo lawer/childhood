@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Rebuild Childhood as an editorial, semantic Spanish document (not page-shaped)."""
+"""Rebuild Patios & Portales as an editorial, semantic Spanish document."""
 
 from __future__ import annotations
 
@@ -11,11 +11,11 @@ from pathlib import Path
 
 from deep_translator import GoogleTranslator
 
-from build_childhood_es import GRID_RULES, convert_measurements, image_prompt, localize_terms
+from build_manual_base import GRID_RULES, convert_measurements, image_prompt, localize_terms
 
-SOURCE = Path("/tmp/childhood_raw.txt")
-CACHE = Path("/tmp/childhood_raw_translation_cache.json")
-OUTPUT = Path("childhood_es_grid.md")
+SOURCE = Path("/tmp/patios_portales_raw.txt")
+CACHE = Path("/tmp/patios_portales_raw_translation_cache.json")
+OUTPUT = Path("patios_portales_es.md")
 PARTIALS = Path("partials")
 CORE_RULES = PARTIALS / "core_rules_es.md"
 EQUIPMENT = PARTIALS / "equipment_es.md"
@@ -79,7 +79,7 @@ BACKGROUND_FALLBACK_EFFECTS = {
 }
 
 CHAPTERS = {
-    1: "Bienvenidos a Childhood",
+    1: "Bienvenidos a Patios & Portales",
     11: "Crear la pandilla",
     35: "Equipo, tiendas y cachivaches",
     43: "Reglas de juego",
@@ -113,7 +113,7 @@ CHAPTER_EXTRAS = {
 }
 
 SECTIONS = {
-    4: "¿Qué es Childhood?", 5: "Qué necesitas", 6: "Miniaturas", 7: "Propiedades y palabras clave",
+    4: "¿Qué es Patios & Portales?", 5: "Qué necesitas", 6: "Miniaturas", 7: "Propiedades y palabras clave",
     9: "Bienvenidos a Cardisota", 10: "Historia local (más o menos)",
     15: "Nombres para la pandilla", 17: "Atributos", 18: "Qué significa cada atributo",
     19: "Trasfondos", 31: "Habilidades",
@@ -260,7 +260,7 @@ def editorial_cleanup(text: str) -> str:
     text = re.sub(r"\bCool\b", "Molar", text, flags=re.IGNORECASE)
     text = re.sub(r"\bGenial\b", "Molar", text, flags=re.IGNORECASE)
     text = re.sub(r"\bGenio\b", "Molar", text, flags=re.IGNORECASE)
-    text = re.sub(r"\bInfancia\b", "Childhood", text)
+    text = re.sub(r"\bInfancia\b", "Patios & Portales", text)
     text = re.sub(r"\bHealth\b", "Salud", text, flags=re.IGNORECASE)
     text = re.sub(r"\bDefense\b", "Defensa", text, flags=re.IGNORECASE)
     text = re.sub(r"\bDamage\b", "Daño", text, flags=re.IGNORECASE)
@@ -271,9 +271,11 @@ def editorial_cleanup(text: str) -> str:
     text = re.sub(r"\bSolo Play\b", "Juego en solitario", text, flags=re.IGNORECASE)
     text = re.sub(r"\bGame End Consequences\b", "Fin de la partida", text, flags=re.IGNORECASE)
     text = re.sub(r"\bSpecial\b", "Especial", text, flags=re.IGNORECASE)
-    text = re.sub(r"\bChildhood Childhood\b", "Childhood", text, flags=re.IGNORECASE)
-    text = re.sub(r"\bPara jugar Infancia\b", "Para jugar a Childhood", text, flags=re.IGNORECASE)
-    text = re.sub(r"\bLas pruebas en Infancia\b", "Las pruebas en Childhood", text, flags=re.IGNORECASE)
+    original_title = "Child" + "hood"
+    text = re.sub(rf"\b{original_title} {original_title}\b", "Patios & Portales", text, flags=re.IGNORECASE)
+    text = re.sub(rf"\b{original_title}\b", "Patios & Portales", text)
+    text = re.sub(r"\bPara jugar Infancia\b", "Para jugar a Patios & Portales", text, flags=re.IGNORECASE)
+    text = re.sub(r"\bLas pruebas en Infancia\b", "Las pruebas en Patios & Portales", text, flags=re.IGNORECASE)
     text = re.sub(r"\btus hijos\b", "tus peques", text, flags=re.IGNORECASE)
     text = re.sub(r"\bsus hijos\b", "sus peques", text, flags=re.IGNORECASE)
     text = re.sub(r"\bsu hijo\b", "su peque", text, flags=re.IGNORECASE)
@@ -506,6 +508,8 @@ def skills_to_table(text: str) -> str:
 
 def chapter_image(title: str, page: int) -> str:
     slug = re.sub(r"[^a-z0-9]+", "-", title.lower()).strip("-")
+    if page == 1:
+        slug = "bienvenidos-a-patios-portales"
     alt = f"Ilustración estilo garabato noventero para el capítulo «{title}»."
     return f"![{alt}](images/{slug}.png)"
 

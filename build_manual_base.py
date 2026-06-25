@@ -12,9 +12,9 @@ from pathlib import Path
 
 from deep_translator import GoogleTranslator
 
-SOURCE = Path("/tmp/childhood_source.txt")
-CACHE = Path("/tmp/childhood_translation_cache.json")
-OUTPUT = Path("childhood_es_grid.md")
+SOURCE = Path("/tmp/patios_portales_source.txt")
+CACHE = Path("/tmp/patios_portales_translation_cache.json")
+OUTPUT = Path("patios_portales_es.md")
 
 
 GLOSSARY = {
@@ -38,7 +38,7 @@ GLOSSARY = {
 }
 
 
-GRID_RULES = """# CHILDHOOD
+GRID_RULES = """# PATIOS & PORTALES
 
 ## Edición española para tablero de casillas
 
@@ -82,7 +82,7 @@ GRID_RULES = """# CHILDHOOD
 | 18\" | 9 casillas |
 | 24\" | 12 casillas |
 
-![PROMPT_PLACEHOLDER](images/childhood-apertura.png)
+![PROMPT_PLACEHOLDER](images/patios-portales-apertura.png)
 
 ---
 """
@@ -234,7 +234,7 @@ def main() -> None:
             f"\n## Página {page_no} del original\n",
             translated,
             "",
-            f"![{image_prompt(page_no)}](images/childhood-pagina-{page_no:03d}.png)",
+            f"![{image_prompt(page_no)}](images/patios-portales-pagina-{page_no:03d}.png)",
             "\n---\n",
         ])
         OUTPUT.write_text("\n".join(output), encoding="utf-8")

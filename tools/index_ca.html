@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ca">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Utilitats — Patis i Portals</title>
+  <link rel="stylesheet" href="../styles/site.css">
+  <script src="../scripts/tools.js" defer></script>
+  <script src="../scripts/alpine.min.js" defer></script>
+</head>
+<body>
+  <nav class="language-switch" aria-label="Selector de idioma"><a href="index.html">Castellano</a><a aria-current="page" href="index_ca.html">Català</a></nav>
+  <main class="page tools-page" x-data="toolsApp()">
+    <a class="back" href="../index_ca.html">← Tornar a l’inici</a>
+    <h1>Utilitats</h1>
+    <p class="lead">Generadors ràpids per muntar una colla sense passar pàgines: noms, menuts, atributs, rerefons i habilitats.</p>
+    <section class="tool-panel" aria-labelledby="gang-title">
+      <div><h2 id="gang-title">Crear colla ràpida</h2><p>Genera nom de colla i quatre menuts amb nom, atributs, Salut, Moviment i Rerefons.</p></div>
+      <div class="tool-actions"><button type="button" @click="generateGang()">Generar colla</button><button type="button" @click="copyGang()">Copiar resultat</button></div>
+      <output id="gang-output" class="tool-output" aria-live="polite" x-html="gangOutput"></output>
+    </section>
+    <section class="tool-grid" aria-label="Utilitats">
+      <article class="tool-panel"><h2>Nom de colla</h2><p>Tira dues vegades 1D100: Taula A + Taula B.</p><button type="button" @click="generateGangName()">Generar nom</button><output id="gang-name-output" class="tool-output small" aria-live="polite" x-html="gangNameOutput"></output></article>
+      <article class="tool-panel"><h2>Nom de menut</h2><p>Tira 1D100 per al nom/malnom i 1D100 per al cognom.</p><button type="button" @click="generateKidName()">Generar menut</button><output id="kid-name-output" class="tool-output small" aria-live="polite" x-html="kidNameOutput"></output></article>
+      <article class="tool-panel"><h2>Atributs</h2><p>Tira 1D6 per obtenir la matriu i reparteix-la entre Ment, Cor, Cos i Molar.</p><button type="button" @click="generateAttributes()">Tirar matriu</button><output id="attributes-output" class="tool-output small" aria-live="polite" x-html="attributesOutput"></output></article>
+      <article class="tool-panel"><h2>Rerefons</h2><p>Tira 1D100 a la taula de Rerefons.</p><button type="button" @click="generateBackground()">Tirar rerefons</button><output id="background-output" class="tool-output small" aria-live="polite" x-html="backgroundOutput"></output></article>
+      <article class="tool-panel"><h2>Habilitat</h2><p>Tira una habilitat a l’atzar de la llista disponible.</p><button type="button" @click="generateSkill()">Tirar habilitat</button><output id="skill-output" class="tool-output small" aria-live="polite" x-html="skillOutput"></output></article>
+      <article class="tool-panel"><h2>Tirador de daus</h2><p>Drecera per a tirades comunes.</p><div class="dice-row"><label>Daus<select id="dice-select" x-model="diceNotation"><option value="1d3">1D3</option><option value="1d6">1D6</option><option value="2d6">2D6</option><option value="1d20">1D20</option><option value="1d100">1D100</option></select></label><button type="button" @click="rollDice()">Tirar</button></div><output id="dice-output" class="tool-output small" aria-live="polite" x-html="diceOutput"></output></article>
+    </section>
+    <aside class="note"><strong>Nota tècnica:</strong> aquestes utilitats estan fetes amb Alpine.js i porten les taules incrustades al mateix JavaScript. Pots obrir aquesta pàgina com a fitxer local sense servidor.</aside>
+  </main>
+</body>
+</html>

@@ -4,7 +4,7 @@
 from pathlib import Path
 import re
 
-text = Path("childhood_es_grid.md").read_text(encoding="utf-8")
+text = Path("patios_portales_es.md").read_text(encoding="utf-8")
 end = text.index("## Habilidades")
 block = text[:end]
 start = block.rfind("| 100 |")

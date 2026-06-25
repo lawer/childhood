@@ -1,13 +1,14 @@
-# Childhood — Edición española para cuadrícula
+# Patios & Portales — Edición española para cuadrícula
 
-Repositorio estático con la adaptación editorial de **Childhood** al castellano de España y a tablero de casillas.
+Repositorio estático con la adaptación editorial de **Patios & Portales** al castellano de España y a tablero de casillas.
 
 ## Entrada principal
 
 Abre `index.html` para navegar el proyecto:
 
-- Manual HTML completo: `childhood_es_grid.html`
-- Fuente Markdown para exportar a PDF: `childhood_es_grid.md`
+- Manual HTML completo: `patios_portales_es.html`
+- Fuente Markdown para exportar a PDF: `patios_portales_es.md`
+- Versión catalana: `index_ca.html`, `patis_portals_ca.html`, `patis_portals_ca.md`
 - Parciales fuente: `partials/`
 - Hojas de estilo: `styles/`
 - Utilidades JavaScript: `tools/` y `scripts/`
@@ -15,6 +16,8 @@ Abre `index.html` para navegar el proyecto:
 - Prompts de mapas: `maps/printable-map-prompts.md`
 - Mapas tácticos SVG: `maps/`
 - Imágenes editoriales: `images/`
+
+Las utilidades de `tools/` están hechas con Alpine.js local y tablas incrustadas en `scripts/tools.js`, así que funcionan también abriendo el HTML como archivo local.
 
 ## Publicar en GitHub Pages
 
@@ -45,8 +48,9 @@ El workflow publica una copia estática limpia con HTML, Markdown, imágenes y m
 Si modificas los fragmentos Markdown fuente, puedes regenerar el documento editorial con:
 
 ```bash
-/tmp/childhood-venv/bin/python build_childhood_editorial.py
-python3 build_childhood_html.py
+python3 build_manual_editorial.py
+python3 build_catalan_versions.py
+python3 build_manual_html.py
 ```
 
 > Ajusta la ruta de Python si usas otro entorno virtual.

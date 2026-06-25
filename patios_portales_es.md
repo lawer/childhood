@@ -1,4 +1,4 @@
-# CHILDHOOD
+# PATIOS & PORTALES
 
 ## Edición española para tablero de casillas
 
@@ -42,17 +42,17 @@
 | 18" | 9 casillas |
 | 24" | 12 casillas |
 
-# Bienvenidos a Childhood
+# Bienvenidos a Patios & Portales
 
-![Ilustración estilo garabato noventero para el capítulo «Bienvenidos a Childhood».](images/bienvenidos-a-childhood.png)
+![Ilustración estilo garabato noventero para el capítulo «Bienvenidos a Patios & Portales».](images/bienvenidos-a-patios-portales.png)
 
 Vuelve el verano. A ti y a tus amigos os esperan días larguísimos de aventuras, misterio e imaginación. Pero este verano no se parece a ninguno de los anteriores.
 
 Algo siniestro ha llegado al pueblo. Tendréis que resolver el misterio, derrotar a los Malos y terminar todas vuestras Tareas para conseguir más tiempo libre. En el corazón de Cardisota está creciendo algo bastante chungo.
 
-## ¿Qué es Childhood?
+## ¿Qué es Patios & Portales?
 
-Childhood es un juego de escaramuzas con miniaturas de 28 mm que no exige una gama concreta. Usa las figuras que ya tengas o monta las tuyas propias. Un caballero espacial, gracias a la imaginación de un peque, puede ser perfectamente el nuevo de la pandilla.
+Patios & Portales es un juego de escaramuzas con miniaturas de 28 mm que no exige una gama concreta.[^nota-origen] Usa las figuras que ya tengas o monta las tuyas propias. Un caballero espacial, gracias a la imaginación de un peque, puede ser perfectamente el nuevo de la pandilla.
 
 Las pruebas utilizan dados poliédricos y normalmente tienen dificultad **DR12**. Tira 1D20, suma los modificadores y consigue 12 o más. Los modificadores de atributos, Hazañas, Defectos, habilidades y equipo son acumulativos. Un 1 natural siempre es una pifia y un 20 natural siempre es un crítico.
 
@@ -101,6 +101,8 @@ Durante el caos de la Última Guerra, Cardisota quedó aislada del gobierno cent
 Hoy los tiempos oscuros parecen haber quedado atrás. La educación pública es sólida e Internet promete ser la gran novedad del futuro. El auge económico de los ochenta dejó tiradas a muchas comunidades, pero quizá la expansión de TBEC y su catálogo de bebidas energéticas aporte empleos e impuestos. Seguro que no sale nada mal.
 
 > **¿SABÍAS QUE…?** New Quack se construyó sobre un antiguo cementerio de mascotas. Antes había sido un vertedero de residuos tóxicos y, antes de eso, un pueblo fantasma surgido durante la fiebre de la plata. Un lugar ideal para criar peques.
+
+[^nota-origen]: Este documento es una adaptación fan no oficial para mesa con cuadrícula, creada a partir de un texto base de *Childhood*. El nuevo título y presentación se usan para evitar confusión con la obra original y no implican afiliación, licencia ni aprobación por parte de sus titulares.
 
 # Crear la pandilla
 
@@ -845,7 +847,7 @@ Todas estas fichas tienen la palabra clave **Tarea**. El Montón de hojas tambi�
 
 ## Episodios y aventuras
 
-La campaña de Childhood se divide en episodios, y cada episodio contiene varias aventuras. Al comenzar uno, la pandilla desbloquea su tienda y puede comprar allí antes de la primera aventura y entre partidas.
+La campaña de Patios & Portales se divide en episodios, y cada episodio contiene varias aventuras. Al comenzar uno, la pandilla desbloquea su tienda y puede comprar allí antes de la primera aventura y entre partidas.
 
 La última aventura de cada episodio es un combate contra un jefe. Al completarla, la tienda de ese episodio cierra y deja de estar disponible. La Tienda general del episodio 1 es la excepción: permanece abierta durante toda la campaña.
 
@@ -1577,7 +1579,7 @@ Todos los artículos son Prohibidos. Solo una pandilla con Tarjeta corporativa p
 
 | Artículo | Tipo | Coste | Efecto |
 |---|---|---:|---|
-| Cartucho de *Childhood* | Objeto | 50 chapas | Supera automáticamente la primera prueba de Mente de cada aventura. |
+| Cartucho de *Patios & Portales* | Objeto | 50 chapas | Supera automáticamente la primera prueba de Mente de cada aventura. |
 | Pastilla morada | Consumible | 30 chapas | Obtiene el Trasfondo 101 además de todos los que ya posea. |
 | Nuevo Zumo de Duende | Consumible | 10 chapas | Elimina todas las Consecuencias. Quien conozca la terrible verdad pierde 1 Mente. |
 | Brazo taladro | Arma | 20 chapas | Cuerpo, Daño 3; ignora Defensa de armadura. |

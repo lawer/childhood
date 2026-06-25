@@ -2,9 +2,9 @@ Vuelve el verano. A ti y a tus amigos os esperan días larguísimos de aventuras
 
 Algo siniestro ha llegado al pueblo. Tendréis que resolver el misterio, derrotar a los Malos y terminar todas vuestras Tareas para conseguir más tiempo libre. En el corazón de Cardisota está creciendo algo bastante chungo.
 
-## ¿Qué es Childhood?
+## ¿Qué es Patios & Portales?
 
-Childhood es un juego de escaramuzas con miniaturas de 28 mm que no exige una gama concreta. Usa las figuras que ya tengas o monta las tuyas propias. Un caballero espacial, gracias a la imaginación de un peque, puede ser perfectamente el nuevo de la pandilla.
+Patios & Portales es un juego de escaramuzas con miniaturas de 28 mm que no exige una gama concreta.[^nota-origen] Usa las figuras que ya tengas o monta las tuyas propias. Un caballero espacial, gracias a la imaginación de un peque, puede ser perfectamente el nuevo de la pandilla.
 
 Las pruebas utilizan dados poliédricos y normalmente tienen dificultad **DR12**. Tira 1D20, suma los modificadores y consigue 12 o más. Los modificadores de atributos, Hazañas, Defectos, habilidades y equipo son acumulativos. Un 1 natural siempre es una pifia y un 20 natural siempre es un crítico.
 
@@ -53,3 +53,5 @@ Durante el caos de la Última Guerra, Cardisota quedó aislada del gobierno cent
 Hoy los tiempos oscuros parecen haber quedado atrás. La educación pública es sólida e Internet promete ser la gran novedad del futuro. El auge económico de los ochenta dejó tiradas a muchas comunidades, pero quizá la expansión de TBEC y su catálogo de bebidas energéticas aporte empleos e impuestos. Seguro que no sale nada mal.
 
 > **¿SABÍAS QUE…?** New Quack se construyó sobre un antiguo cementerio de mascotas. Antes había sido un vertedero de residuos tóxicos y, antes de eso, un pueblo fantasma surgido durante la fiebre de la plata. Un lugar ideal para criar peques.
+
+[^nota-origen]: Este documento es una adaptación fan no oficial para mesa con cuadrícula, creada a partir de un texto base de *Childhood*. El nuevo título y presentación se usan para evitar confusión con la obra original y no implican afiliación, licencia ni aprobación por parte de sus titulares.

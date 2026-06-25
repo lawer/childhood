@@ -1,94 +1,33 @@
 <!doctype html>
-<html lang="ca">
+<html lang="es">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Utilidades — Childhood</title>
+  <title>Utilidades — Patios & Portales</title>
   <link rel="stylesheet" href="../styles/site.css">
   <script src="../scripts/tools.js" defer></script>
+  <script src="../scripts/alpine.min.js" defer></script>
 </head>
 <body>
-  <main class="page tools-page">
-    <a class="back" href="../index.html">← Tornar a l’inici</a>
+  <nav class="language-switch" aria-label="Selector de idioma"><a aria-current="page" href="index.html">Castellano</a><a href="index_ca.html">Català</a></nav>
+  <main class="page tools-page" x-data="toolsApp()">
+    <a class="back" href="../index.html">← Volver al inicio</a>
     <h1>Utilidades</h1>
-    <p class="lead">
-      Generadores rápidos para montar una pandilla sin estar pasando páginas:
-      nombres, peques, atributos, trasfondos y habilidades.
-    </p>
-
+    <p class="lead">Generadores rápidos para montar una pandilla sin estar pasando páginas: nombres, peques, atributos, trasfondos y habilidades.</p>
     <section class="tool-panel" aria-labelledby="gang-title">
-      <div>
-        <h2 id="gang-title">Crear pandilla rápida</h2>
-        <p>Genera nombre de pandilla y cuatro peques con nombre, atributos, Salud, Movimiento y Trasfondo.</p>
-      </div>
-      <div class="tool-actions">
-        <button type="button" data-action="generate-gang">Generar pandilla</button>
-        <button type="button" data-action="copy-gang">Copiar resultado</button>
-      </div>
-      <output id="gang-output" class="tool-output" aria-live="polite"></output>
+      <div><h2 id="gang-title">Crear pandilla rápida</h2><p>Genera nombre de pandilla y cuatro peques con nombre, atributos, Salud, Movimiento y Trasfondo.</p></div>
+      <div class="tool-actions"><button type="button" @click="generateGang()">Generar pandilla</button><button type="button" @click="copyGang()">Copiar resultado</button></div>
+      <output id="gang-output" class="tool-output" aria-live="polite" x-html="gangOutput"></output>
     </section>
-
-    <section class="tool-grid" aria-label="Generadores individuales">
-      <article class="tool-panel">
-        <h2>Nombre de pandilla</h2>
-        <p>Tira dos veces 1D100: Tabla A + Tabla B.</p>
-        <button type="button" data-action="gang-name">Generar nombre</button>
-        <output id="gang-name-output" class="tool-output small" aria-live="polite"></output>
-      </article>
-
-      <article class="tool-panel">
-        <h2>Nombre de peque</h2>
-        <p>Tira 1D100 para nombre/apodo y 1D100 para apellido.</p>
-        <button type="button" data-action="kid-name">Generar peque</button>
-        <output id="kid-name-output" class="tool-output small" aria-live="polite"></output>
-      </article>
-
-      <article class="tool-panel">
-        <h2>Atributos</h2>
-        <p>Tira 1D6 para obtener la matriz y repártela entre Mente, Corazón, Cuerpo y Molar.</p>
-        <button type="button" data-action="attributes">Tirar matriz</button>
-        <output id="attributes-output" class="tool-output small" aria-live="polite"></output>
-      </article>
-
-      <article class="tool-panel">
-        <h2>Trasfondo</h2>
-        <p>Tira 1D100 en la tabla de Trasfondos.</p>
-        <button type="button" data-action="background">Tirar trasfondo</button>
-        <output id="background-output" class="tool-output small" aria-live="polite"></output>
-      </article>
-
-      <article class="tool-panel">
-        <h2>Habilidad</h2>
-        <p>Tira una habilidad al azar desde la lista disponible.</p>
-        <button type="button" data-action="skill">Tirar habilidad</button>
-        <output id="skill-output" class="tool-output small" aria-live="polite"></output>
-      </article>
-
-      <article class="tool-panel">
-        <h2>Tirador de dados</h2>
-        <p>Atajo para tiradas comunes.</p>
-        <div class="dice-row">
-          <label>
-            Dados
-            <select id="dice-select">
-              <option value="1d3">1D3</option>
-              <option value="1d6">1D6</option>
-              <option value="2d6">2D6</option>
-              <option value="1d20">1D20</option>
-              <option value="1d100">1D100</option>
-            </select>
-          </label>
-          <button type="button" data-action="roll-dice">Tirar</button>
-        </div>
-        <output id="dice-output" class="tool-output small" aria-live="polite"></output>
-      </article>
+    <section class="tool-grid" aria-label="Utilidades">
+      <article class="tool-panel"><h2>Nombre de pandilla</h2><p>Tira dos veces 1D100: Tabla A + Tabla B.</p><button type="button" @click="generateGangName()">Generar nombre</button><output id="gang-name-output" class="tool-output small" aria-live="polite" x-html="gangNameOutput"></output></article>
+      <article class="tool-panel"><h2>Nombre de peque</h2><p>Tira 1D100 para nombre/apodo y 1D100 para apellido.</p><button type="button" @click="generateKidName()">Generar peque</button><output id="kid-name-output" class="tool-output small" aria-live="polite" x-html="kidNameOutput"></output></article>
+      <article class="tool-panel"><h2>Atributos</h2><p>Tira 1D6 para obtener la matriz y repártela entre Mente, Corazón, Cuerpo y Molar.</p><button type="button" @click="generateAttributes()">Tirar matriz</button><output id="attributes-output" class="tool-output small" aria-live="polite" x-html="attributesOutput"></output></article>
+      <article class="tool-panel"><h2>Trasfondo</h2><p>Tira 1D100 en la tabla de Trasfondos.</p><button type="button" @click="generateBackground()">Tirar trasfondo</button><output id="background-output" class="tool-output small" aria-live="polite" x-html="backgroundOutput"></output></article>
+      <article class="tool-panel"><h2>Habilidad</h2><p>Tira una habilidad al azar desde la lista disponible.</p><button type="button" @click="generateSkill()">Tirar habilidad</button><output id="skill-output" class="tool-output small" aria-live="polite" x-html="skillOutput"></output></article>
+      <article class="tool-panel"><h2>Tirador de dados</h2><p>Atajo para tiradas comunes.</p><div class="dice-row"><label>Dados<select id="dice-select" x-model="diceNotation"><option value="1d3">1D3</option><option value="1d6">1D6</option><option value="2d6">2D6</option><option value="1d20">1D20</option><option value="1d100">1D100</option></select></label><button type="button" @click="rollDice()">Tirar</button></div><output id="dice-output" class="tool-output small" aria-live="polite" x-html="diceOutput"></output></article>
     </section>
-
-    <aside class="note">
-      <strong>Nota técnica:</strong> estas utilidades leen los datos desde los parciales Markdown.
-      En GitHub Pages funcionarán directamente. Si abres esta página con doble clic como archivo local,
-      algunos navegadores pueden bloquear la carga por seguridad; en ese caso usa un servidor local.
-    </aside>
+    <aside class="note"><strong>Nota técnica:</strong> estas utilidades están hechas con Alpine.js y llevan las tablas incrustadas en el propio JavaScript. Puedes abrir esta página como archivo local sin servidor.</aside>
   </main>
 </body>
 </html>
